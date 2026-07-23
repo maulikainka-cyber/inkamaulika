@@ -236,6 +236,13 @@ img {
     box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
 }
 
+.logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
 .logo-text h1 {
     font-size: 1.25rem;
     font-weight: 800;
