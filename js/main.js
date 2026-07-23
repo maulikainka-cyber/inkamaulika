@@ -117,11 +117,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = document.getElementById('modalClose');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
+    const modalImg = document.getElementById('modalImg');
+    const modalIconBox = document.getElementById('modalIconBox');
 
-    window.openModal = function(title, desc) {
+    window.openModal = function(title, desc, imgSrc = null) {
         if (modal) {
             if (modalTitle) modalTitle.textContent = title;
             if (modalDesc) modalDesc.textContent = desc;
+
+            if (imgSrc && modalImg) {
+                modalImg.src = imgSrc;
+                modalImg.style.display = 'block';
+                if (modalIconBox) modalIconBox.style.display = 'none';
+            } else {
+                if (modalImg) modalImg.style.display = 'none';
+                if (modalIconBox) modalIconBox.style.display = 'flex';
+            }
+
             modal.classList.add('active');
         }
     };

@@ -409,13 +409,20 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-category="kegiatan"
-                        onclick="openModal('Foto Bersama Upacara Bendera', 'Kegiatan upacara bendera dan kebersamaan seluruh siswa-siswi MTsN 1 Konawe Selatan.')">
-                        <div class="gallery-img-placeholder">
-                            <i class="fa-solid fa-users"></i>
+                        onclick="openModal('Foto Kebersamaan Guru & Staf', 'Momen foto kebersamaan bapak dan ibu guru serta staf MTsN 1 Konawe Selatan pada acara Perpisahan Peserta Didik Kelas IX.', 'images/galeri-guru.png')">
+                        <img src="images/galeri-guru.png" alt="Foto Kebersamaan Guru MTsN 1 Konsel" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h4>Foto Kebersamaan Guru & Staf</h4>
+                            <p>Perpisahan Kelas IX</p>
                         </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="kegiatan"
+                        onclick="openModal('Foto Kebersamaan Siswa (Denouement 26)', 'Kebersamaan siswa-siswi MTsN 1 Konawe Selatan dalam malam keakraban & Last Ceremony Denouement 26.', 'images/galeri-siswa.jpg')">
+                        <img src="images/galeri-siswa.jpg" alt="Foto Kebersamaan Siswa Denouement 26" class="gallery-img">
                         <div class="gallery-overlay">
                             <h4>Foto Kebersamaan Siswa</h4>
-                            <p>Upacara & Kebersamaan</p>
+                            <p>Denouement 26 - MTsN 1 Konsel</p>
                         </div>
                     </div>
 
@@ -428,30 +435,6 @@
                         <div class="gallery-overlay">
                             <h4>Penyerahan Piala Juara</h4>
                             <p>Prestasi Siswa</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="fasilitas"
-                        onclick="openModal('Laboratorium Komputer', 'Ruang lab komputer ber-AC lengkap dengan akses internet cepat untuk ujian dan pembelajaran digital.')">
-                        <div class="gallery-img-placeholder"
-                            style="background: linear-gradient(135deg, #4caf50, #81c784);">
-                            <i class="fa-solid fa-desktop"></i>
-                        </div>
-                        <div class="gallery-overlay">
-                            <h4>Laboratorium Komputer</h4>
-                            <p>Fasilitas Belajar Digital</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="kegiatan"
-                        onclick="openModal('Setoran Hafalan Qur\'an', 'Bimbingan rutin hafalan Qur\'an bersama guru tahfidz madrasah.')">
-                        <div class="gallery-img-placeholder"
-                            style="background: linear-gradient(135deg, #2e7d32, #e8f5e9);">
-                            <i class="fa-solid fa-book-quran"></i>
-                        </div>
-                        <div class="gallery-overlay">
-                            <h4>Setoran Tahfidz Al-Qur'an</h4>
-                            <p>Program Keagamaan</p>
                         </div>
                     </div>
                 </div>
@@ -640,9 +623,10 @@
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&times;</button>
             <div class="modal-body">
-                <div class="modal-icon-box">
+                <div class="modal-icon-box" id="modalIconBox">
                     <i class="fa-solid fa-circle-info"></i>
                 </div>
+                <img id="modalImg" style="width: 100%; max-height: 380px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; display: none;" src="" alt="Preview">
                 <h3 id="modalTitle"
                     style="color: var(--primary-dark); font-weight: 800; margin-bottom: 1rem; font-size: 1.4rem;"></h3>
                 <p id="modalDesc" style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;"></p>
